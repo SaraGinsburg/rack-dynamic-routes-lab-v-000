@@ -1,7 +1,7 @@
 # Your application should only accept the /items/<ITEM NAME> route.
 # Everything else should 404
 
-class application
+class Application
 
 def call(env)
   resp = Rack::Response.new
