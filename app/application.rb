@@ -11,6 +11,7 @@ class Application
     if req.path.match(/items/)
       item_requested = req.path.split("/items/").last
       item = @@items.find{|i| i.name = item_requested}
+      binding.pry
       if item.nil?
         resp.write "Item not found"
         resp.status = 400
